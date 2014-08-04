@@ -48,10 +48,44 @@ class UsersController < ApplicationController
     head :no_content
   end
   
-  def splatts
+	def splatts
 		@user = User.find(params[:id])
 		
 		render json: @user.splatts
+	end
+	
+	def show_follows
+		@user = User.find(params[:id])
+		
+		render json: @user.follows
+	end
+	
+	def show_followers
+		@user = User.find(params[:id])
+		
+		render json: @user.followed_by
+	end
+	
+	def add_follows
+		@follower = User.find(params[:id])
+		@followed = User.find(params[:follows_id])
+		
+		if @follower.follows << @followed
+			head: no_content
+		else
+			render json @follower.errors
+		end
+	end
+	
+	def delete_follows
+		@follower = User.find(params[:id])
+		@followed = User.find(params[:follows_id])
+		
+		if @follower.follows.delete(@followed)
+			head: no_content
+		else
+			render json @follower.errors
+		end
 	end
   
 private

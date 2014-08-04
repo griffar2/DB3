@@ -71,3 +71,34 @@ cd splatter
 rails server
 $ git config --global user.name "Andrew Griffin"
 $git config --global user.name "Andrew Griffin"
+cd splatter
+rails generate scaffold Splatt body:string user:belongs_to
+rake db:migrate
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/splatts -d '{"splatt": {"body":"Hello, Splatter world", "user_id":"1"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users -d '{"user": {"email":"test@foo.com", "name":"Test User", "password":"foo"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/splatts -d '{"splatt": {"body":"Hello, Splatter world", "user_id":"3"}}'
+curl -i -H "Content-type: application/json" -X DELETE http://griffin.sqrawler.com:3000/users/3
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users -d '{"user": {"email":"test@foo.com", "name":"Test User", "password":"foo"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/splatts -d '{"splatt": {"body":"Hello, Splatter world", "user_id":"4"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/splatts -d '{"splatt": {"body":"Hello, Splatter world", "user_id":"1"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/splatt -d '{"splatt": {"body":"Hello, Splatter world", "user_id":"4"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/splatts -d '{"splatt": {"body":"Hello, Splatter world", "user_id":"4"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/splatts -d '{"splatt": {"body":"Whaddup world", "user_id":"4"}}'
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts/4
+# PATCH/PUT /users/1
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts/4
+ls
+cd ..
+ls
+git status
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:griffar2/DB3.git
+git push
+git pull
+git pull origin master
+git push origin master
+rails server
+cd splatter
+rails server
