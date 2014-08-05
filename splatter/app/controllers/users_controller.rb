@@ -71,7 +71,7 @@ class UsersController < ApplicationController
 		@followed = User.find(params[:follows_id])
 		
 		if @follower.follows << @followed
-			head: no_content
+			
 		else
 			render json @follower.errors
 		end
@@ -82,10 +82,17 @@ class UsersController < ApplicationController
 		@followed = User.find(params[:follows_id])
 		
 		if @follower.follows.delete(@followed)
-			head: no_content
+			
 		else
 			render json @follower.errors
 		end
+	end
+	
+	# GET /users/splatts-feed/1
+	def splatts_feed
+		@feed = Splatt.find_by_sql("SELECT user_id, body, created_at FROM splatts JOIN follows ON follows.followed_id = splatts.user_id WHERE follows.follower_id = '#{params[:id]}' ORDER BY splatts.created_at")
+		
+		render json: @feed
 	end
   
 private
