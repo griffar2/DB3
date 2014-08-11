@@ -102,3 +102,55 @@ git push origin master
 rails server
 cd splatter
 rails server
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts/4
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users -d '{"user": {"email":"test@foo.com", "name":"Test User", "password":"foo"}}'
+rake db:migrate
+splatter
+cd splatter
+rake db:migrate
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts/4
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users -d '{"user": {"email":"test@foo.com", "name":"Test User", "password":"foo"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users/follows -d '{"id":5, "follow_id":4}'
+curl -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users/follows -d '{"id":5, "follow_id":4}'
+cd splatter
+cd db
+cd migrate
+rails generate <20140804133300>_create_follows.rb
+create <20140804133300>_create_follows.rb
+<20140804133400>_create_follows.rb
+touch <20140804133400>_create_follows.rb
+touch 20140804133500_create_follows.rb
+nano 20140804133500_create_follows.rb
+cd..
+cd ..
+cd ....
+cd .. ..
+cd app/models/user.rb
+cd ..
+git init
+git add .
+git commit -m "Lab 3.1, follower methods"
+git remote add origin git@github.com:griffar2/DB3.git
+git push origin master
+git pull origin master
+rails server
+cd splatter
+rails server
+cd splatter
+server rails
+rails server
+cd splatter
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users/follows -d '{"id":5, "follow_id":4}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users/follows -d '{"id":4, "follow_id":5}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users/follows -d '{"id":4, "follows_id":5}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users/follows -d '{"id":5, "follows_id":4}'
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts-feed -d '{"id":4}'
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts-feed -d '{"id":5}'
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/feed -d '{"id":5}'
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts-feed -d '{"id":5}'
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts-feed -d '{"id":4}'
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts-feed/4
+curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts-feed/5
+git add .
+git commit -m "Lab 3.2, splatter newsfeed"
+git push origin master

@@ -1,6 +1,20 @@
 class User < ActiveRecord::Base
 has_many :splatts
 
+validates :name, presence: true
+
+validates :email, uniqueness: {case_sensitive: false}
+
+validates :password, length: {minimum: 8}, if::strong?
+
+def strong?
+	password =~ /.*\d+.*/ && \
+	password =~ /.*[a-z]+.*/ && \
+	password =~ /.*[A-Z].*/
+end
+
+
+
 has_and_belongs_to_many :follows,
 	class_name: "User",
 	join_table: :follows,
