@@ -45,6 +45,6 @@ curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3
 
 curl -i -H "Content-type: application/json" -X DELETE http://griffin.sqrawler.com:3000/users/follows/1/3
 
-#displays the first user’s news feed after unfollowing the third
+#displays the first users news feed after unfollowing the third
 
 curl -i -H "Content-type: application/json" -X GET http://griffin.sqrawler.com:3000/users/splatts-feed/1
