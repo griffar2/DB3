@@ -4,6 +4,8 @@ Splatter::Application.routes.draw do
   
   get 'users/splatts/:id' => 'users#splatts'
   
+  match 'users', to: 'users#index', via: [:options]
+  
   get 'users/follows/:id' => 'users#show_follows'
   get 'users/followers/:id' => 'users#show_followers'
   post 'users/follows' => 'users#add_follows'

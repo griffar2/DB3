@@ -2,7 +2,7 @@
 
 #Create 3 Users
 
-curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users -d '{"user": {"email":"andrew@student.op.ac.nz", "name":"Andrew Grififn", "password":"123Tester"}}'
+curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users -d '{"user": {"email":"andrew@student.op.ac.nz", "name":"Andrew Griffin", "password":"123Tester"}}'
 curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users -d '{"user": {"email":"liam@student.op.ac.nz", "name":"Liam Donald", "password":"Tester123"}}'
 curl -i -H "Content-type: application/json" -X POST http://griffin.sqrawler.com:3000/users -d '{"user": {"email":"alex@student.op.ac.nz", "name":"Alex Jones", "password":"Testing55"}}'
 

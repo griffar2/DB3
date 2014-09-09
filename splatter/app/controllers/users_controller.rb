@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
 	before_filter :set_headers
 	
+	
+	
   # GET /users
   # GET /users.json
   def index
