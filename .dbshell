@@ -1,0 +1,24 @@
+db.cities.insert({ name: "Dunedin", population: 126000, mayor: "Dave Cull", famous_for: ["scarfies", "Shit weather"] })
+show collections
+db.cities.find()
+db.cities.insrt
+db.cities.insert
+function addCity(name, population, mayor, famous_for) {db.cities.insert({name: name, population: population, mayor: mayor, famous_for: famous_for});}
+addCity("Christchurch", 366000, "Lianne Dalziel", ["Earthquakes"])
+db.cities.insert(name: "Melbourne", country: "Australia")
+db.cities.insert({name: "Melbourne", country: "Australia"})
+db.cities.find()
+db.cities.find(population: $lt: 200000)
+db.cities.find({population: $lt: 200000})
+db.cities.find(population: $lt: "200000")
+db.cities.find(population $lt: 200000)
+db.cities.find(population: $lt 200000)
+db.cities.find(name: "Dunedin")
+db.cities.find({name: "Dunedin"})
+db.cities.update({name: "Dunedin"}, {$set: population: 125000})
+db.cities.update({name: "Dunedin"}, {$set: {population: 125000}})
+db.cities.find({population: $lt:{ 200000}})
+db.cities.find(population: $lt: {200000})
+db.cities.remove(name: "Christchurch")
+db.cities.remove({name: "Christchurch"})
+db.cities.find()
