@@ -320,3 +320,114 @@ curl -H "Content-type: application/json" -X GET http://localhost:3000/users/540f
 curl -H "Content-type: application/json" -X GET http://localhost:3000/users/540f8a6869702d385d000000 -d '{"name":"Bob"}'
 curl -H "Content-type: application/json" -X PUT http://localhost:3000/users/540f8a6869702d385d000000 -d '{"name":"Bob"}'
 curl -H "Content-type: application/json" -X GET http://localhost:3000/users/540f8a6869702d385d000000
+sudo service apache2 restart
+git add .
+git push origin master
+git add .
+git commit -m "Most features working"
+git push origin master
+cd splatter
+git tag M@
+git tag
+git tag M2
+git tag
+sudo service apache2 restart
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users \-d '{"name": "Mongo User", "email":"a@b.c", "password":"foo", "blurb":"blar"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users \-d '{"name": "Mongo User", "email":"a@b.c", "password":"foo123123", "blurb":"blar"}'
+rails server
+server rails
+cd mongo
+rails server
+cd db3
+cd DB3
+cd splatter
+rails server
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users \-d '{"name": "Mongo User", "email":"a@b.c", "password":"123foo123", "blurb":"blar"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users \-d '{"name": "Mongo", "email":"a@b.c", "password":"123foo123", "blurb":"blar"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users \-d '{"name": "Andy", "email":"a@b.c", "password":"123foo123", "blurb":"blar"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/5416461269702d2556010000
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/5416461269702d2556010000/5416462a69702d2556020000
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/ -d '{'id':'5416461269702d2556010000','follows_id':'5416462a69702d2556020000'}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/ -d '{'id':5416461269702d2556010000,'follows_id':5416462a69702d2556020000}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/ -d '{'id':'5416461269702d2556010000','follows_id':'5416462a69702d2556020000'}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/ -d '{'id':"5416461269702d2556010000",'follows_id':"5416462a69702d2556020000"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/ -d '{"id":"5416461269702d2556010000","follows_id":"5416462a69702d2556020000"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/ -d '{"id":"5416462a69702d2556020000","follows_id":"5416461269702d2556010000"}'
+curl -H "Content-type: application/json" -X GET  http://localhost:3000/users/followers/5416462a69702d2556020000
+curl -H "Content-type: application/json" -X GET  http://localhost:3000/users/followers -d '{"id":"5416462a69702d2556020000"}'
+curl -H "Content-type: application/json" -X GET  http://localhost:3000/users/follows -d '{"id":"5416462a69702d2556020000"}'
+curl -H "Content-type: application/json" -X DELETE http://localhost:3000/users/follows/ -d '{"id":"5416462a69702d2556020000","follows_id":"5416461269702d2556010000"}'
+sudo service apache2 restart
+curl -H "Content-type: application/json" -X DELETE http://localhost:3000/users/follows/ -d '{"id":"5416462a69702d2556020000","follows_id":"5416461269702d2556010000"}'
+curl -H "Content-type: application/json" -X DELETE http://localhost:3000/users/follows/5416462a69702d2556020000/5416461269702d2556010000
+curl -H "Content-type: application/json" -X GET  http://localhost:3000/users/followers/5416462a69702d2556020000
+curl -H "Content-type: application/json" -X GET  http://localhost:3000/users/follows/5416462a69702d2556020000
+curl -H "Content-type: application/json" -X GET  http://localhost:3000/users/follows/5416462a69702d2556010000
+curl -H "Content-type: application/json" -X GET  http://localhost:3000/users/followers/5416462a69702d2556010000
+cd mongo
+cd db3
+cd DB3
+cd splatter
+cd ..
+cd..
+cd ..
+cd splatter
+git tag
+git push origin M1
+git push origin M2
+mongo spaltter_development
+cd mongo/DB3/splatter
+mongo splatter_development
+sudo service apache2 restart
+rails server
+cd mongo
+cd DB#
+cd DB3
+cd splatter
+rails sever
+rails server
+cd mongo
+cd DB#
+cd DB3
+cd splatter
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/ -d '{"id":"5416462a69702d2556020000","follows_id":"5416461269702d2556010000"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/users/follows/ -d '{"id":"5416461269702d2556010000","follows_id":"5416462a69702d2556020000"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/splatts -d '{"splatt": {"body":"My first splatt!!", "user_id":5416461269702d2556010000}}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/splatts -d '{"body":"My first splatt!!", "user_id":5416461269702d2556010000}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/splatts -d '{"body":"My first splatt!!", "user_id":"5416461269702d2556010000"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/splatts -d '{"body":"Another splatt!!", "user_id":"5416461269702d2556010000"}'
+curl -H "Content-type: application/json" -X POST http://localhost:3000/splatts -d '{"body":"Another splatt!!", "user_id":"541645de69702d2556000000"}'
+curl https://packagecloud.io/install/repositories/basho/riak/script.deb | sudo bash sudo apt-get install riak
+curl https://packagecloud.io/install/repositories/basho/riak/script.deb | sudo bash
+sudo apt-get install riak
+cd etc
+cd ..
+cd etc
+cd init.d
+sudo nano riak
+cd ../../..
+cd home
+cd griffar2
+cd griffin
+sudo service riak start
+cd ../../..
+cd etc/init.d
+sudo nano riak
+sudo service riak start
+curl -v -X PUT http://localhost:8098/riak/hello/world -H "Content-Type: text/html" -d "<html><body><h1>Hello, world</h1></body></html>
+"
+curl -v -X PUT http://localhost:8089/riak/animals/bob -H "Content-Type: application/json" -d '{"name":"Bob", "species":"possum"}'
+curl -v -X PUT http://localhost:8098/riak/animals/bob -H "Content-Type: application/json" -d '{"name":"Bob", "species":"possum"}'
+curl -v -X PUT http://localhost:8098/riak/animals/bob -H "Content-Type: application/json" -d '{"name":"Dave", "species":"Sassquatch"}'
+curl -v -X PUT http://localhost:8098/riak/animals/bob -H "Content-Type: application/json" -d '{"name":"Fred", "species":"Elephant"}'
+curl -v -X PUT http://localhost:8098/riak/animals/bob -H "Content-Type: application/json" -d '{"name":"Jason", "species":"Mouse"}'
+curl http://localhost:8098/riak?buckets=true
+curl http://localhost:8098/riak/hello?keys=true
+curl http://localhost:8098/riak/animals?keys=true
+curl -v -X PUT http://localhost:8098/riak/cages/1
+curl -v -X PUT http://localhost:8098/riak/cages/1 -H "Content-Type: application/json" -H "Link: </riak/animals/bob>; riaktag=\"contains\""-d '{"room" : "D311"}'
+curl -v -X PUT http://localhost:8098/riak/cages/2 -H "Content-Type: application/json" -H "Link: </riak/animals/bob>; riaktag=\"contains\""-d '{"room" : "D311"}'
+curl -v -X PUT http://localhost:8098/riak/cages/1 -H "Content-Type: application/json" -H "Link: </riak/animals/bob>; riaktag=\"contains\"" -d '{"room" : "D311"}'
+curl http://localhost:8098/riak/cages/1/_,contains._
+curl http://localhost:8098/riak/cages/1
+curl -v -X PUT http://localhost:8098/riak/photos/bob -H "Content-Type: image/jpeg" -H "Link: </riak/animals/bob>; riaktag=\"photo\"" --data-binary @bob.jpg

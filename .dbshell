@@ -22,3 +22,33 @@ db.cities.find(population: $lt: {200000})
 db.cities.remove(name: "Christchurch")
 db.cities.remove({name: "Christchurch"})
 db.cities.find()
+db.users.find()
+;
+db.users.find()
+var map = function() { var length = 0; if(this.splatts) { length = this.splatts.length } emit ("count", length); };
+var reduce = function(key, val) { var data = 0; val.forEach(function(v) { data += v; }); return data; }
+db.users.mapReduce( map, reduce, { out: {inline: 1} } }
+db.users.mapReduce( map, reduce, { out: {inline: 1} } ;  ;  }
+db.users.mapReduce( map, reduce, { out: {inline: 1}} }
+map
+reduce
+db.users.mapReduce( map, reduce, { out: {inline: 1}} }
+db.users.mapReduce( map, reduce, { out: {inline: 1} } )
+db.users.mapReduce( map, reduce, { out: {inline: 1} } )
+var map = function() { if(this.follow_ids) { this.follow_ids.forEach(function(id) { var u = db.users.findOne({_id: id}); emit("feed", {"list": u.splatts}); }); } else { emit("feed", {"list": []}); } }
+var reduce = function(key, values) { var myfeed = {"list": []}; values.forEach(function(v) { myfeed.list = myfeed.list.concat(v.list); }); return myfeed; }
+var finalise = function(key, val) { var mylist = val.list; if(mylist) { mylist.sort(function(a, b) { return b.created_at - a.created_at}); } return {"list": mylist}; }
+db.users.mapReduce(map, reduce, out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("5416717562696259b8000000")} })
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("5416717562696259b8000000")} })
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("5416461269702d2556010000")} })
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("540f8ed369702d38b4000000")} })
+db.users.find
+db.users.find()
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("5422023569702d7a18000000")} })
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("5416462a69702d2556020000")} })
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("541645de69702d2556000000")} })
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("5416461269702d2556010000")} })
+var map = function() { if(this.follow_ids) { this.follow_ids.forEach(function(id) { var u = db.users.findOne({_id: ObjectId}); emit("feed", {"list": u.splatts}); }); } else { emit("feed", {"list": []}); } }
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("5416461269702d2556010000")} })
+var map = function() { if(this.follow_ids) { this.follow_ids.forEach(function(id) { var u = db.users.findOne({_id: id}); emit("feed", {"list": u.splatts}); }); } else { emit("feed", {"list": []}); } }
+db.users.mapReduce(map, reduce,{out: {inline: 1}, finalize: finalise, query: {_id: ObjectId("5416461269702d2556010000")} })
